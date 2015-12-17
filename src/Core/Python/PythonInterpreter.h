@@ -26,6 +26,7 @@
  DEALINGS IN THE SOFTWARE.
 */
 
+#ifdef BUILD_WITH_PYTHON
 #ifndef CORE_PYTHON_PYTHONINTERPRETER_H
 #define CORE_PYTHON_PYTHONINTERPRETER_H
 
@@ -74,7 +75,7 @@ private:
 public:
   // INITIALIZE:
   /// Initialize the python interpreter with extra modules.
-  void initialize( /*const wchar_t* program_name, const module_list_type& init_list*/ );
+  void initialize( bool needProgramName /*const wchar_t* program_name, const module_list_type& init_list*/ );
 
   // PRINT_BANNER:
 	/// Print the basic information about the python interpreter to output_signal_.
@@ -123,4 +124,5 @@ public:
 
 }}
 
+#endif
 #endif
